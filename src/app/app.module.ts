@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainContainerComponent } from './components/main-container/main-container.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { PasswordManagerComponent } from './components/password-manager/password-manager.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { RegisterComponent } from './components/register/register.component';
     MainContainerComponent,
     LoginComponent,
     RegisterComponent,
+    PasswordManagerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
