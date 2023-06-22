@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PasswordManagerService } from 'src/app/services/password-manager.service';
 
 @Component({
   selector: 'app-password-manager',
@@ -10,7 +11,7 @@ export class PasswordManagerComponent implements OnInit {
   newPassword: string = '';
   confirmPassword: string = '';
 
-  constructor() {}
+  constructor(private passwordManagerService: PasswordManagerService) {}
 
   ngOnInit(): void {}
 }
