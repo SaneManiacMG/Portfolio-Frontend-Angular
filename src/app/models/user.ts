@@ -1,12 +1,12 @@
 import { Role } from './enums/role';
 
 export class User {
-  userId: number;
+  userId?: number;
   userName: string;
-  firstName: string;
-  lastName: string;
+  firstName?: string;
+  lastName?: string;
   email: string;
-  phoneNr: string;
+  phoneNr?: string;
   role: Role;
 
   constructor() {

@@ -2,27 +2,19 @@
   <form class="form-elements-container">
     <div class="form-element">
       <label for="userId">User ID:</label>
-      <input
-        type="text"
-        class="textbox"
-        id="userId"
-        placeholder="Enter username or email"
-      />
+      <input type="text" class="textbox" id="userId" [(ngModel)]="loginDetails.userId"
+        placeholder="Enter username or email" />
     </div>
     <div class="form-element">
       <label for="password">Password:</label>
-      <input
-        type="password"
-        class="textbox"
-        id="password"
-        placeholder="Enter password"
-      />
+      <input type="password" class="textbox" id="password" [(ngModel)]="loginDetails.password"
+        placeholder="Enter password" />
     </div>
     <div class="btn-container">
       <button class="btn-submit">Login</button>
     </div>
     <div class="form-element" style="display: block">
-      <input type="checkbox" id="rememberMe" name="rememberMe" value="true" />
+      <input type="checkbox" id="rememberMe" name="rememberMe" [(ngModel)]="rememberMe" value="true" />
       <label for="rememberMe">Remember Me</label>
     </div>
   </form>

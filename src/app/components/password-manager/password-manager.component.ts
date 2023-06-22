@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../../app.component.css'],
 })
 export class PasswordManagerComponent implements OnInit {
+  currentPassword: string = '';
+  newPassword: string = '';
+  confirmPassword: string = '';
+
   constructor() {}
 
   ngOnInit(): void {}
