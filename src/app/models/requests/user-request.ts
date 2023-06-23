@@ -6,7 +6,6 @@ export class UserRequest {
   lastName?: string;
   email: string;
   phoneNr?: string;
-  role: Role;
 
   constructor() {
     this.userName = '';
@@ -14,6 +13,5 @@ export class UserRequest {
     this.lastName = '';
     this.email = '';
     this.phoneNr = '';
-    this.role = Role.Visitor;
   }
 }

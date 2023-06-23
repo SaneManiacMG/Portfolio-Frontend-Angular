@@ -1,4 +1,4 @@
-import { Role } from '../enums/role';
+import { Role } from '../../models/enums/role';
 
 export class UserResponse {
   userName: string;
