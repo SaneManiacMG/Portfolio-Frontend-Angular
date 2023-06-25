@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Login } from 'src/app/models/login';
-import { User } from 'src/app/models/user';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -10,10 +9,32 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginComponent implements OnInit {
   loginDetails: Login = new Login();
-  user: User = new User();
   rememberMe: boolean = false;
 
   constructor(private loginService: LoginService) {}
 
   ngOnInit(): void {}
+
+  submitLoginDetails(): void {
+    console.log(
+      'Login Details:\n' +
+        JSON.stringify(this.loginDetails) +
+        '\nRemember Me: ' +
+        this.rememberMe
+    );
+
+    this.loginService.loginUser(this.loginDetails).subscribe(
+      (data) => {
+        console.log('Response from Server:\n' + JSON.stringify(data));
+      },
+      (error) => {
+        if (error.status == 401) {
+          const errorResponse = error.error.response;
+          console.log('Error from server:\n' + errorResponse);
+        } else {
+          console.log('Error from server:\n' + error);
+        }
+      }
+    );
+  }
 }
