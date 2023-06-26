@@ -7,6 +7,7 @@ import { PasswordManagerService } from 'src/app/services/password-manager.servic
   styleUrls: ['../../app.component.css'],
 })
 export class PasswordManagerComponent implements OnInit {
+  userId = '';
   currentPassword: string = '';
   newPassword: string = '';
   confirmPassword: string = '';
@@ -14,4 +15,8 @@ export class PasswordManagerComponent implements OnInit {
   constructor(private passwordManagerService: PasswordManagerService) {}
 
   ngOnInit(): void {}
+
+  // changePassword() {
+  //   this.passwordManagerService.changePassword(this.userId, this.currentPassword, this.newPassword, this.confirmPassword);
+  // }
 }
