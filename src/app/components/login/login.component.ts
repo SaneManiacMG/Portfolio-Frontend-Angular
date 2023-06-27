@@ -25,7 +25,8 @@ export class LoginComponent implements OnInit {
 
     this.loginService.loginUser(this.loginDetails).subscribe(
       (data) => {
-        console.log('Response from Server:\n' + JSON.stringify(data));
+        console.log('Response from Server:\n' + JSON.stringify(data.response));
+        localStorage.setItem('token', data.response);
       },
       (error) => {
         if (error.status == 401) {
