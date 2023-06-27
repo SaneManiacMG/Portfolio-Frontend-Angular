@@ -4,7 +4,7 @@ import { PasswordManagerService } from 'src/app/services/password-manager.servic
 @Component({
   selector: 'app-password-manager',
   templateUrl: './password-manager.component.html',
-  styleUrls: ['../../app.component.css'],
+  styleUrls: ['../../../app.component.css'],
 })
 export class PasswordManagerComponent implements OnInit {
   userId = '';

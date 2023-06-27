@@ -6,12 +6,13 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainContainerComponent } from './components/main-container/main-container.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-import { PasswordManagerComponent } from './components/password-manager/password-manager.component';
+import { LoginComponent } from './components/login-tabs/login/login.component';
+import { RegisterComponent } from './components/login-tabs/register/register.component';
+import { PasswordManagerComponent } from './components/login-tabs/password-manager/password-manager.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtInterceptorService } from './services/jwt-interceptor.service';
+import { LoginTabsComponent } from './components/login-tabs/login-tabs.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { JwtInterceptorService } from './services/jwt-interceptor.service';
     LoginComponent,
     RegisterComponent,
     PasswordManagerComponent,
+    LoginTabsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [
