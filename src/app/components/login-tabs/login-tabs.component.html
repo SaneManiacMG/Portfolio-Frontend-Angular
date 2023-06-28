@@ -1,1 +1,21 @@
-<p>login-tabs works!</p>
+<div class="container" style="width: 365px;">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <ul class="nav nav-tabs">
+        <li class=" nav-link" role="presentation" [ngClass]="{'active': loginTab}" (click)="loginTab = true"><a
+            href="#">Login</a></li>
+        <li class="nav-link" role="presentation" [ngClass]="{'active': !loginTab}" (click)="loginTab = false"><a
+            href="#">Register</a>
+        </li>
+      </ul>
+      <div class="tab-content" style="padding: 10px 0 0 0;">
+        <div class="tab-pane active" *ngIf="loginTab">
+          <app-login></app-login>
+        </div>
+        <div class="tab-pane active" *ngIf="!loginTab">
+          <app-register></app-register>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
